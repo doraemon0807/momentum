@@ -1,0 +1,31 @@
+@import "reset.css";
+@import "greetings.css";
+@import "todo.css";
+@import "quotes.css";
+@import "clock.css";
+@import "weather.css";
+
+.hidden {
+  display: none;
+}
+
+.fade_in_out {
+  opacity: 0.9;
+  animation-name: fade_in_out;
+  animation-duration: 20000ms;
+}
+
+@keyframes fade_in_out {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.9;
+  }
+  97% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}

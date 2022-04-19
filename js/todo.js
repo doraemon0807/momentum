@@ -61,9 +61,4 @@ if(savedToDos !== null){
     parsedToDos.forEach(paintToDo)
 }
 
-
-if (savedUsername === null){
-    toDoForm.classList.add(HIDDEN_CLASSNAME)
-} else{
-    toDoForm.classList.remove(HIDDEN_CLASSNAME)
-}
+// toDoForm.classList.add(NODISPLAY_CLASSNAME)

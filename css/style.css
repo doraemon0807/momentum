@@ -4,8 +4,15 @@
 @import "quotes.css";
 @import "clock.css";
 @import "weather.css";
+@import "music.css";
+@import "bookmark.css";
+@import "animation.css";
 
 .hidden {
+  visibility: hidden;
+}
+
+.noDisplay{
   display: none;
 }
 
@@ -15,17 +22,100 @@
   animation-duration: 20000ms;
 }
 
-@keyframes fade_in_out {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 0.9;
-  }
-  97% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
-  }
+.fadeIn{
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+body{
+  overflow: hidden;
+  box-sizing:border-box;
+  color: rgb(70,70,70);
+  transition: background 2s ease-in-out;
+  ;
+}
+
+#main{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.frame--style{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  padding-top: 20px;
+  background-color: rgba(225,225,225,0.2);
+  border-radius: 10px;
+  border: 1px solid rgb(215,215,215);
+  box-shadow: 1px 1px 5px rgb(215,215,215);
+  position: absolute;
+
+  width: 25%;
+  flex-shrink: 1;
+}
+
+.frame--style--top{
+  top: 200px;
+}
+
+.frame--style--bottom{
+  bottom: 50px;
+}
+
+.gadget__title--style{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px 10px 10px;
+  background-color: rgba(245,245,245);
+  border-radius: 10px;
+  border: 1px solid rgb(215,215,215);
+  box-shadow: 1px 1px 5px rgb(215,215,215);
+  position: absolute;
+  top: -20px;
+  font-size: 18px;
+}
+
+
+#logout_frame{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  margin: 30px;
+  color: rgb(115,115,115);
+  opacity: 0;
+}
+
+#logout_frame i{
+  font-size: 25px;
+}
+
+#main{
+  margin: 2.5vh 2.5vw;
+  width: 95vw;
+  height: 95vh;
+  border-radius: 30px;
+  border: solid 2px rgb(215,215,215);
+  position: relative;
+}
+
+.slide-in-bottom{
+  animation: slide-in-bottom 0.5s ease-in-out forwards 3s;
+}
+
+.slide-in-left{
+  animation: slide-in-left 0.5s ease-in-out forwards 3s;
+}
+
+.slide-in-right{
+  animation: slide-in-right 0.5s ease-in-out forwards 3s;
 }

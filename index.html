@@ -18,23 +18,89 @@
         />
         <button>Log In</button>
       </form>
-      <h2 id="clock">00:00:00</h2>
+
       <h1 id="greetings" class="hidden"></h1>
-      <form id="todo-form">
-        <input
-          type="text"
-          placeholder="Write a To Do and Press Enter"
-          required
-        />
-      </form>
-      <ul id="todo-list"></ul>
-      <div id="quote">
-        <span></span>
-        <span></span>
+
+      <div id="weather_frame" class="frame--style frame--style--top hidden">
+        <div id="weather__title" class="gadget__title--style">Weather</div>
+        <div id="weather">
+          <h2 id="weather__area"></h2>
+          <div id="weather__main">
+            <div id="weather__main__weather">
+              <img src="" />
+              <span></span>
+            </div>
+            <div id="weather__main__temp">
+              <div id="weather__main__temp__main">
+                <span></span>
+                <span></span>
+              </div>
+              <div id="weather__main__temp__sub">
+                <div id="weather__main__temp__sub__min">
+                  <span>Min:</span>
+                  <span></span>
+                </div>
+                <div id="weather__main__temp__sub__max">
+                  <span>Max:</span>
+                  <span></span>
+                </div>
+                <div id="weather__main__temp__sub__hum">
+                  <span>Humidity:</span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="weather">
-        <span></span>
-        <span></span>
+
+      <div id="date_frame" class="frame--style frame--style--top hidden">
+        <div id="date__title" class="gadget__title--style">Today is:</div>
+        <div id="today">
+          <h2 id="today__day"></h2>
+          <h2 id="today__time"></h2>
+        </div>
+        <h2 id="clock"></h2>
+      </div>
+
+      <div id="todo_frame" class="frame--style frame--style--top hidden">
+        <div id="todo__title" class="gadget__title--style">To-Do List</div>
+        <form id="todo-form">
+          <input
+            type="text"
+            placeholder="Write a To Do and Press Enter"
+            required
+          />
+        </form>
+        <div id="todo__lists">
+          <ul id="todo-list"></ul>
+        </div>
+      </div>
+
+      <div id="quote_frame" class="frame--style frame--style--bottom hidden">
+        <div id="quote__title" class="gadget__title--style">Simpson Says</div>
+        <div id="quote">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="bookmark_frame" class="frame--style frame--style--bottom hidden">
+        <div id="bookmark__title" class="gadget__title--style">Bookmarks</div>
+        <div id="bookmark">
+          <div>BOOKMARK COMES HERE</div>
+        </div>
+      </div>
+
+      <div id="music_frame" class="frame--style frame--style--bottom hidden">
+        <div id="music__title" class="gadget__title--style">Music Player</div>
+        <div id="music">
+          <div>MUSIC COMES HERE</div>
+        </div>
+      </div>
+
+      <div id="logout_frame" class="frame--style hidden">
+        <i id="logout" class="fas fa-sign-out-alt"></i>
       </div>
     </div>
     <script src="js/greetings.js"></script>
@@ -42,6 +108,9 @@
     <script src="js/quotes.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
-    <!-- <script src="js/background.js"></script> -->
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

@@ -54,7 +54,7 @@ const quotes = [
 const quote = document.querySelector("#quote span:first-child")
 const author = document.querySelector("#quote span:last-child")
 const bgImage = document.createElement("img")
-
+const simpsonquote = document.getElementById("quote")
 
 
 function updateQuote(){
@@ -65,24 +65,17 @@ function updateQuote(){
     quote.innerText = todaysQuote.quote
     author.innerText = todaysQuote.author
 
-    document.body.appendChild(bgImage)
+    simpsonquote.appendChild(bgImage)
 }
-bgImage.id = "background_image"
+bgImage.id = "image"
 
-bgImage.classList.add("fade_in_out")
-author.classList.add("fade_in_out")
-quote.classList.add("fade_in_out")
+bgImage.classList.add(FADEINOUT_CLASSNAME)
+author.classList.add(FADEINOUT_CLASSNAME)
+quote.classList.add(FADEINOUT_CLASSNAME)
 
 updateQuote()
 setInterval(updateQuote, 20000)
 
-if (savedUsername === null){
-    bgImage.classList.add(HIDDEN_CLASSNAME)
-    quote.classList.add(HIDDEN_CLASSNAME)
-    author.classList.add(HIDDEN_CLASSNAME)
-
-} else{
-    bgImage.classList.remove(HIDDEN_CLASSNAME)
-    quote.classList.remove(HIDDEN_CLASSNAME)
-    author.classList.remove(HIDDEN_CLASSNAME)
-}
+// bgImage.classList.add(NODISPLAY_CLASSNAME)
+// quote.classList.add(NODISPLAY_CLASSNAME)
+// author.classList.add(NODISPLAY_CLASSNAME)

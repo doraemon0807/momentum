@@ -7,13 +7,26 @@ function onGeoOk(position){
     fetch(url)
     .then(response => response.json())
     .then(data => {
-        const weather = document.querySelector("#weather span:first-child")
-        const city = document.querySelector("#weather span:last-child")
-        weather.innerText = `${data.weather[0].main} / ${data.main.temp}°C`
-        city.innerText = data.name
-    })
+        const weatherArea = document.getElementById("weather__area")
+        
+        const weatherIcon = document.querySelector("#weather__main__weather img")
+        const weatherDesc = document.querySelector("#weather__main__weather span")
+        const weatherTemp = document.querySelector("#weather__main__temp__main span:first-child")
+        const weatherFeel = document.querySelector("#weather__main__temp__main span:last-child")
+        const weatherMin = document.querySelector("#weather__main__temp__sub__min span:last-child")
+        const weatherMax = document.querySelector("#weather__main__temp__sub__max span:last-child")
+        const weatherHum = document.querySelector("#weather__main__temp__sub__hum span:last-child")
 
-}   
+        weatherArea.innerText = `${data.name}, ${data.sys.country}`
+        weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+        weatherDesc.innerText = data.weather[0].description
+        weatherTemp.innerText = `${Math.round(data.main.temp)}°C`
+        weatherFeel.innerText = `Feels like: ${Math.round(data.main.feels_like)}°C`
+        weatherMin.innerText = `${Math.round(data.main.temp_min)}°C`
+        weatherMax.innerText = `${Math.round(data.main.temp_max)}°C`
+        weatherHum.innerText = `${Math.round(data.main.humidity)}%`
+    })
+}
 
 function onGeoError(){
     alert("Can't find you. No weather for you!")

@@ -79,15 +79,12 @@
     transform: translateY(-50%);
     width: 30px;
     height: 30px;
+    cursor: pointer;
 }
 
 #todo-list i{
     font-size: 16px;
     color: rgb(185,185,185);
-}
-
-#todo-list button:hover i{
-    color: rgb(75,75,75);
 }
 
 #todo-list i:active{
@@ -109,6 +106,8 @@
     border: 1px solid rgb(195,195,195);
     background-color: transparent;
     margin-right: 15px;
+    flex-shrink: 0;
+
 }
 
 #todo-list__bullet{

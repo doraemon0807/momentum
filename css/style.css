@@ -54,13 +54,14 @@ body{
   color: var(--black);
   border: var(--frame-border);
   background-color: var(--frame-color);
+  box-shadow: var(--box-shadow);
 }
 
 .light-mode i{
   color: var(--black);
 }
 
-.light-mode:hover{
+.light-mode:hover:not(.gadget__title--style){
   background-color: var(--frame-color-hover);
 }
 
@@ -68,13 +69,14 @@ body{
   color: var(--black-dark);
   border: var(--frame-border-dark);
   background-color: var(--frame-color-dark);
+  box-shadow: var(--box-shadow-dark);
 }
 
 .dark-mode i{
   color: var(--black-dark);
 }
 
-.dark-mode:hover{
+.dark-mode:hover:not(.gadget__title--style){
   background-color: var(--frame-color-hover-dark);
 }
 
@@ -88,6 +90,23 @@ body{
   border: var(--todo-border-dark);
 }
 
+.todo-light-mode #todo-list button:hover i{
+  color: var(--black);
+}
+
+.todo-dark-mode #todo-list button:hover i{
+  color: var(--black-dark);
+}
+
+.tv-light-mode{
+  color: rgb(39, 66, 221)
+}
+
+.tv-dark-mode{
+  color: rgb(236, 171, 73)
+}
+
+
 .frame--style{
   display: flex;
   flex-direction: column;
@@ -95,7 +114,6 @@ body{
   padding: 15px;
   padding-top: 20px;
   border-radius: 10px;
-  box-shadow: 1px 1px 5px rgb(215,215,215);
   position: absolute;
   width: 25%;
   flex-shrink: 1;

@@ -24,6 +24,9 @@ darkModeFrame.addEventListener("click", ()=>{
     toDoLists.classList.toggle("todo-light-mode")
     toDoLists.classList.toggle("todo-dark-mode")
 
+    tvLink.classList.toggle("tv-light-mode")
+    tvLink.classList.toggle("tv-dark-mode")
+
 })
 
 logoutFrame.addEventListener("click", ()=>{
@@ -67,4 +70,5 @@ for(let i = 0; i < titles.length; i++){
 
 toDoLists.classList.add("todo-light-mode")
 
+tvLink.classList.add("tv-light-mode")
 

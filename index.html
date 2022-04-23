@@ -19,7 +19,10 @@
         <button>Log In</button>
       </form>
 
-      <h1 id="greetings" class="hidden"></h1>
+      <h1
+        id="greetings"
+        class="frame--style frame--style--greetings hidden"
+      ></h1>
 
       <div id="weather_frame" class="frame--style frame--style--top hidden">
         <div id="weather__title" class="gadget__title--style">Weather</div>
@@ -52,6 +55,15 @@
             </div>
           </div>
         </div>
+        <div id="weather__error">
+          <h2>Cannot find you.</h2>
+          <h2>No Weather For you!</h2>
+          <button>Retry</button>
+        </div>
+        <div id="weather__loading">
+          <div></div>
+          <h2>Loading your Weather Data...</h2>
+        </div>
       </div>
 
       <div id="date_frame" class="frame--style frame--style--top hidden">
@@ -74,40 +86,50 @@
         </form>
         <div id="todo__lists">
           <ul id="todo-list"></ul>
+          <h2>You have no pending tasks!</h2>
         </div>
       </div>
 
-      <div id="quote_frame" class="frame--style frame--style--bottom hidden">
-        <div id="quote__title" class="gadget__title--style">Simpson Says</div>
-        <div id="quote">
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-
-      <div id="bookmark_frame" class="frame--style frame--style--bottom hidden">
-        <div id="bookmark__title" class="gadget__title--style">Bookmarks</div>
-        <div id="bookmark">
-          <div>BOOKMARK COMES HERE</div>
-        </div>
-      </div>
-
-      <div id="music_frame" class="frame--style frame--style--bottom hidden">
-        <div id="music__title" class="gadget__title--style">Music Player</div>
-        <div id="music">
-          <div>MUSIC COMES HERE</div>
+      <div id="tv_frame" class="frame--style frame--style--bottom hidden">
+        <div id="tv__title" class="gadget__title--style">Recommended Show</div>
+        <div id="tv">
+          <div id="tv__poster"></div>
+          <div id="tv__info">
+            <div id="tv__info__title">
+              <span></span>
+            </div>
+            <div id="tv__info__year">
+              <h3>Year of Release</h3>
+              <span></span>
+            </div>
+            <div id="tv__info__summary">
+              <h3>Summary</h3>
+              <span></span>
+            </div>
+            <div id="tv__info__starring">
+              <h3>Starring</h3>
+              <span></span>
+            </div>
+          </div>
         </div>
       </div>
 
       <div id="logout_frame" class="frame--style hidden">
         <i id="logout" class="fas fa-sign-out-alt"></i>
       </div>
+
+      <div id="dark-mode_frame" class="frame--style hidden">
+        <i id="dark-mode" class="fas fa-sun"></i>
+      </div>
     </div>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
+    <script src="js/tv.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/config.js"></script>
+
     <script
       src="https://kit.fontawesome.com/6478f529f2.js"
       crossorigin="anonymous"

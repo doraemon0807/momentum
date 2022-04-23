@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+@import "variable.css";
+
 @import "reset.css";
 @import "greetings.css";
 @import "todo.css";
-@import "quotes.css";
+@import "tv.css";
 @import "clock.css";
 @import "weather.css";
-@import "music.css";
-@import "bookmark.css";
 @import "animation.css";
+@import "background.css";
 
 .hidden {
   visibility: hidden;
@@ -16,14 +19,14 @@
   display: none;
 }
 
-.fade_in_out {
-  opacity: 0.9;
-  animation-name: fade_in_out;
-  animation-duration: 20000ms;
-}
-
 .fadeIn{
   animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.fadeOut{
+  animation-name: fadeOut;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
@@ -31,18 +34,59 @@
 body{
   overflow: hidden;
   box-sizing:border-box;
-  color: rgb(70,70,70);
-  transition: background 2s ease-in-out;
-  ;
+  color: var(--black);
+  transition: background-color 0.5s ease-in-out;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 #main{
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  margin: 2.5vh 2.5vw;
+  width: 95vw;
+  height: 95vh;
+  border-radius: 30px;
+  border: solid 2px rgb(215,215,215);
+  position: relative;
 }
 
+.light-mode{
+  color: var(--black);
+  border: var(--frame-border);
+  background-color: var(--frame-color);
+}
+
+.light-mode i{
+  color: var(--black);
+}
+
+.light-mode:hover{
+  background-color: var(--frame-color-hover);
+}
+
+.dark-mode{
+  color: var(--black-dark);
+  border: var(--frame-border-dark);
+  background-color: var(--frame-color-dark);
+}
+
+.dark-mode i{
+  color: var(--black-dark);
+}
+
+.dark-mode:hover{
+  background-color: var(--frame-color-hover-dark);
+}
+
+.todo-light-mode{
+  background-color: var(--todo-color);
+  border: var(--todo-border);
+}
+
+.todo-dark-mode{
+  background-color: var(--todo-color-dark);
+  border: var(--todo-border-dark);
+}
 
 .frame--style{
   display: flex;
@@ -50,18 +94,20 @@ body{
   align-items: center;
   padding: 15px;
   padding-top: 20px;
-  background-color: rgba(225,225,225,0.2);
   border-radius: 10px;
-  border: 1px solid rgb(215,215,215);
   box-shadow: 1px 1px 5px rgb(215,215,215);
   position: absolute;
-
   width: 25%;
   flex-shrink: 1;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.frame--style--greetings{
+  width: auto;
 }
 
 .frame--style--top{
-  top: 200px;
+  top: 160px;
 }
 
 .frame--style--bottom{
@@ -73,49 +119,75 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5px 10px 10px 10px;
-  background-color: rgba(245,245,245);
+  padding: 8px 10px 10px 10px;
   border-radius: 10px;
-  border: 1px solid rgb(215,215,215);
   box-shadow: 1px 1px 5px rgb(215,215,215);
   position: absolute;
   top: -20px;
   font-size: 18px;
+  font-weight: 500;
 }
 
-
-#logout_frame{
+#logout_frame,
+#dark-mode_frame{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 25px;
   height: 25px;
-  margin: 30px;
   color: rgb(115,115,115);
   opacity: 0;
+  position: absolute;
+  top: 30px;
 }
 
-#logout_frame i{
+#logout_frame{
+  left: 30px;
+}
+#dark-mode_frame{
+  right: 30px;
+}
+
+#logout_frame i,
+#dark-mode_frame i{
   font-size: 25px;
 }
 
-#main{
-  margin: 2.5vh 2.5vw;
-  width: 95vw;
-  height: 95vh;
-  border-radius: 30px;
-  border: solid 2px rgb(215,215,215);
-  position: relative;
+#logout_frame i:hover,
+#dark-mode_frame i:hover{
+  transform: scale(1.02)
+}
+
+#logout_frame i:active,
+#dark-mode_frame i:active{
+  transform: scale(0.95)
 }
 
 .slide-in-bottom{
-  animation: slide-in-bottom 0.5s ease-in-out forwards 3s;
+  animation: slide-in-bottom 0.5s ease-in-out forwards;
 }
 
 .slide-in-left{
-  animation: slide-in-left 0.5s ease-in-out forwards 3s;
+  animation: slide-in-left 0.5s ease-in-out forwards;
 }
 
 .slide-in-right{
-  animation: slide-in-right 0.5s ease-in-out forwards 3s;
+  animation: slide-in-right 0.5s ease-in-out forwards;
+}
+
+
+.slide-out-bottom{
+  animation: slide-out-bottom 0.5s ease-in-out forwards;
+}
+
+.slide-out-left{
+  animation: slide-out-left 0.5s ease-in-out forwards;
+}
+
+.slide-out-right{
+  animation: slide-out-right 0.5s ease-in-out forwards;
+}
+
+.slide-out-top{
+  animation: slide-out-top 0.5s ease-in-out forwards;
 }

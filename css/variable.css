@@ -1,0 +1,17 @@
+:root {
+    --black: rgb(50,50,50);
+
+    --frame-color: rgba(235,235,235,0.8);
+    --frame-color-hover: rgba(245,245,245,0.9);
+    --frame-border: 1px solid rgb(215,215,215);
+    --todo-color: rgba(245,245,245,0.7);
+    --todo-border: rgb(195,195,195);
+    
+    --black-dark: rgb(235,235,235);
+    --frame-color-dark: rgba(70,70,70,0.8);
+    --frame-color-hover-dark: rgba(55,55,55,0.9);
+    --frame-border-dark: 1px solid rgb(115,115,115);
+    --todo-color-dark: rgba(90,90,90,0.7);
+    --todo-border-dark: rgba(110,110,110,0.7);
+  }
+  

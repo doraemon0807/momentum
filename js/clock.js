@@ -17,7 +17,6 @@ function getClock(){
     day.innerText = weekday
     time.innerText = `${month} ${todaysDate} ${year}`
 
-    // const hours = String(date.getHours()).padStart(2,"0")
     let hours = date.getHours() > 12? date.getHours()-12 : date.getHours()
     if (hours == 0){
         hours = 12
@@ -31,5 +30,3 @@ function getClock(){
 
 getClock()
 setInterval(getClock, 1000)
-
-// clock.classList.add(NODISPLAY_CLASSNAME)

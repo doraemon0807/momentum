@@ -10,38 +10,6 @@
     align-items: center;
 }
 
-@-webkit-keyframes puff-in-center {
-    0% {
-      -webkit-transform: scale(2);
-              transform: scale(2);
-      -webkit-filter: blur(4px);
-              filter: blur(4px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
-  }
-  @keyframes puff-in-center {
-    0% {
-      -webkit-transform: scale(2);
-              transform: scale(2);
-      -webkit-filter: blur(4px);
-              filter: blur(4px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-filter: blur(0px);
-              filter: blur(0px);
-      opacity: 1;
-    }
-  }
 
 #login-form input{
     border: none;
@@ -71,7 +39,7 @@
     color: rgb(140,140,140);
     opacity: 0;
     animation: fadeIn 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) forwards;
-    animation-delay: 1.8s;
+    animation-delay: 1.2s;
     transition: 0.1s ease-in-out;
 }
 
@@ -80,14 +48,6 @@
     color: rgb(180,180,180);
 }
 
-@keyframes greetingsAnimation {
-    0%{
-        transform: translate(-50%, -50%);
-    }
-    100%{
-        transform: translate(-50%, -380px);
-    }
-}
 
 #greetings{
   font-size: 40px;
@@ -96,10 +56,6 @@
   font-weight: 600;
   display: flex;
   padding: 13px 15px;
-  background-color: rgba(215,215,215,0.2);
-  border-radius: 10px;
-  border: 1px solid rgb(215,215,215);
-  box-shadow: 1px 1px 5px rgb(215,215,215);
 }
 
 .greetingsAnimation{

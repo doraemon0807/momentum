@@ -1,0 +1,52 @@
+#tv_frame{
+  left: 60px;
+  right: 500px;
+  opacity: 0;
+  height: 350px;
+  width: 58%;
+}
+
+#tv{
+  display: flex;
+  margin-top: 8px;
+}
+
+#tv__poster img{
+  height: 340px;
+  width: auto;
+  border-radius: 20px;
+  margin-right: 30px;
+}
+
+
+#tv__info{
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+#tv__info div:not(#tv__info__title){
+  font-size: 16px;
+  margin-bottom: 26px;
+}
+
+#tv__info__title{
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+#tv__info h3{
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+#tv__info a{
+  cursor: pointer;
+  color: rgb(39, 66, 221)
+}
+
+#tv__info a:hover{
+  color: rgb(121, 21, 235);
+  text-decoration: underline;
+}

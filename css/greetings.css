@@ -41,6 +41,7 @@
     animation: fadeIn 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) forwards;
     animation-delay: 1.2s;
     transition: 0.1s ease-in-out;
+    cursor: pointer;
 }
 
 #login-form button:hover{
